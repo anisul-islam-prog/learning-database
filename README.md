@@ -1,4 +1,4 @@
-# ztmDatabaseNotes
+# Database Notes
 
 ### What is database?
 
@@ -26,3 +26,12 @@ There are various types of queries because queries are so versatile, and you wou
 ### What is a declarative programming language?
 
 A declarative programming language is one example. Expressions do not explicitly describe computations, but rather convey the form of the outcome of some operation. It is the database system's query interpreter's responsibility to develop and execute a computing procedure to produce such a result.
+
+### What is a Relational Database (RDBMS)?
+
+A relational database is a form of database that stores and makes data points connected to one another. Relational databases are based on the relational model, which is a simple and obvious manner of expressing data in tables. Each row in a relational database is a record with a unique ID called the key. The columns of the table carry data attributes, and each record typically includes a value for each attribute, making it simple to construct links between data points.
+
+#### A relational database example:
+Here's a simple example of two tables that a small firm may use to process product orders. The first table is a customer information table, which means that each entry contains a customer's name, address, shipping and payment information, phone number, and other contact information. Each piece of information (each attribute) is in its own column, and each row is assigned a unique ID (a key) by the database. Each entry in the second database, a customer order table, provides the ID of the customer who made the order, the product ordered, the quantity, the chosen size and color, and so on—but not the client's name or contact information.
+
+The only thing these two tables have in common is the ID column (the key). However, because of that shared field, the relational database may establish a link between the two tables. The database can then go to the customer order table, pull the correct information about the product order, and use the customer ID from that table to look up the customer's billing and shipping information in the customer info table when the company's order processing application submits an order to the database. The warehouse can then fetch the proper product, the consumer will receive their purchase on schedule, and the corporation will be compensated.
