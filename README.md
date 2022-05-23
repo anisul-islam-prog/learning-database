@@ -35,3 +35,31 @@ A relational database is a form of database that stores and makes data points co
 Here's a simple example of two tables that a small firm may use to process product orders. The first table is a customer information table, which means that each entry contains a customer's name, address, shipping and payment information, phone number, and other contact information. Each piece of information (each attribute) is in its own column, and each row is assigned a unique ID (a key) by the database. Each entry in the second database, a customer order table, provides the ID of the customer who made the order, the product ordered, the quantity, the chosen size and color, and so on—but not the client's name or contact information.
 
 The only thing these two tables have in common is the ID column (the key). However, because of that shared field, the relational database may establish a link between the two tables. The database can then go to the customer order table, pull the correct information about the product order, and use the customer ID from that table to look up the customer's billing and shipping information in the customer info table when the company's order processing application submits an order to the database. The warehouse can then fetch the proper product, the consumer will receive their purchase on schedule, and the corporation will be compensated.
+
+### What is a Relational Database (DBMS)?
+
+A database management system (or DBMS) is essentially just a computerized data storage system. Users of the system are given the ability to execute a variety of operations on it, including data manipulation and database structure maintenance.
+
+### What is Primary key and Foreign key?
+
+A primary key is a specific key in a relational database that works as a unique identifier for each record. It identifies each row/record in a table and its value should be unique for each row in the table. On the other hand, a foreign key is a field in one table that connects two tables.
+
+**As for example:**
+
+> `users` table:
+
+| id | Name | age | gender | interest_id
+|--|-----| ----| -- | --| 
+|1|A|23|F|i2
+|2|B|24|M|i1
+
+> `interests` table:
+
+|id|interests|
+|-|--------------------------------------------|
+|i1|{'swim', 'play', 'cheescake'}|
+|i2|{'plants', 'cooking', 'cheescake'}|
+
+In the above example, column `interest_id` (foreign key) in `users` table is connecting `interests` table.   
+
+### What is a 
