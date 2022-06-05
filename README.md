@@ -62,4 +62,35 @@ A primary key is a specific key in a relational database that works as a unique 
 
 In the above example, column `interest_id` (foreign key) in `users` table is connecting `interests` table.   
 
-### What is a 
+### What is OLAP?
+
+**Online analytical processing (OLAP)** is a method of performing multi-dimensional analysis on massive amounts of data at rapid speeds. This data is usually pulled from a data warehouse, data mart, or other centralized data repository. OLAP is great for data mining, business intelligence, and complex analytical calculations, as well as financial analysis, budgeting, and sales forecasting in corporate reporting.
+
+### What is OLTP?
+
+**Online transactional processing (OLTP)** allows a large number of individuals to execute enormous amounts of database transactions in real time, usually over the Internet. Many of our daily transactions, from ATMs to in-store purchases to hotel reservations, are powered by OLTP systems. Non-financial transactions, such as password changes and text messages, can be driven by OLTP.
+
+### What is SQL Commands?
+
+SQL commands are the instructions that tell a database how to perform activities, functions, and queries on data. SQL commands can be used to search the database as well as do other tasks such as creating tables, adding data to tables, changing data, dropping tables,controlling database access, and overall database administration.
+
+The main categories are:
+
+- DDL (Data Definition Language): `CREATE`,`ALTER`, `DROP`, `RENAME`, `TRUNCATE`, `COMMENT`
+- DML (Data Manipulation Language): `INSERT`,`UPDATE`,`DELETE`, `MERGE`, `CALL`, `EXPLAIN PLAN`, `LOCK TABLE`
+- DQL (Data Query Language): `SELECT`
+- DCL (Data Control Language) : `GRANT`, `REVOKE`
+- Data administration commands: `START AUDIT`, `STOP AUDIT`
+- Transactional control commands: `COMMIT`, `ROLLBACK`, `SAVEPOINT`, `SET TRANSACTION`
+
+### What is a function?
+
+A function is a set of steps that creates a single value. Types of function:
+
+- Aggregate: Operate on many records to produce 1 value.
+
+Example: `sum()`, `avg()`, `count()`, `min()`, `max()`
+
+- Scalar: Operate on each record independently
+
+Example: `concat()`, `to_char()`, `to_date`
