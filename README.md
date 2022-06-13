@@ -38,7 +38,7 @@ The only thing these two tables have in common is the ID column (the key). Howev
 
 ### What is a Relational Database (DBMS)?
 
-A database management system (or DBMS) is essentially just a computerized data storage system. Users of the system are given the ability to execute a variety of operations on it, including data manipulation and database structure maintenance.
+A database management system (or DBMS) is essentially just a computerized data storage system. users of the system are given the ability to execute a variety of operations on it, including data manipulation and database structure maintenance.
 
 ### What is Primary key and Foreign key?
 
@@ -93,4 +93,36 @@ Example: `sum()`, `avg()`, `count()`, `min()`, `max()`
 
 - Scalar: Operate on each record independently
 
-Example: `concat()`, `to_char()`, `to_date`
+Example: `concat()`, `to_char()`, `to_date()`, `coalesce()`
+
+### What is filter? 
+
+SQL filters are text strings that are used to designate a subset of the data items of a data type in an internal or SQL database. The filter is a SQL WHERE clause that specifies a set of comparisons that must be true in order for a data item to be returned for SQL database and internal data types. Typically, these comparisons are made between field names and their values.
+
+The type of comparison is specified by one of the standard comparison operators. The SQL filter syntax supports the following comparative operators:
+
+- `>` Example: `SELECT * FROM users WHERE age > 18`
+- `<` Example: `SELECT * FROM users WHERE age < 60`
+- `=` Example: `SELECT * FROM users WHERE age = 25`
+- `<=` Example: `SELECT * FROM users WHERE age <= 25`
+- `=>` Example: `SELECT * FROM users WHERE age => 25`
+- `!=` Example: `SELECT * FROM users WHERE age != 21`
+- `AND` Example: `SELECT * FROM users WHERE age > 18 AND age < 60`
+- `OR` Example: `SELECT * FROM users WHERE age = 25 OR age = 23`
+- `NOT` Example: `SELECT * FROM users WHERE NOT age=60`
+- `IS` Example: `SELECT * FROM users WHERE birth_date IS NULL`
+- `BETWEEN` Example: `SELECT * FROM users WHERE age BETWEEN 25 AND 35`
+- `IN` Example: `SELECT * FROM users WHERE id IN (36001,50012,27006, 271044)`
+- `LIKE` Example: `SELECT * FROM users WHERE name LIKE 'A%'`
+
+***Note:*** PostGres Like only does text comparison so we must cast whatever we use to text
+```
+CAST(salary AS text)
+
+or
+
+salary::text
+```
+- `ILIKE` (**case insensitive**) Example: `SELECT * FROM users WHERE name ILIKE 'A%'`
+
+### What is timezones?
