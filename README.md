@@ -123,6 +123,74 @@ or
 
 salary::text
 ```
-- `ILIKE` (**case insensitive**) Example: `SELECT * FROM users WHERE name ILIKE 'A%'`
+- `ILIKE` (**case insensitive**) Example: `SELECT * FROM users WHERE name ILIKE 'a%'`
 
 ### What is timezones?
+A time zone is a region where people live and work according to a common standard time. Because it is easy for locations in frequent communication to preserve the same time, time zones typically follow the boundaries between countries and their subdivisions rather than rigidly following longitude.
+
+From Coordinated Universal Time (UTC), which ranges from UTC-12:00 to UTC+14:00, all time zones are defined as offsets. The offsets are often a whole number of hours, although some zones—like those in India, South Australia, and Nepal—are offset by an additional 30 or 45 minutes. 
+
+Higher latitude regions occasionally observe daylight saving time, which often involves advancing local time by an hour in the spring and summer.
+
+[Problem with localtime zone and solution](https://www.databasestar.com/database-timezones/) 
+
+### What are SQL Joins?
+
+SQL Join statement is used to combine data or rows from two or more tables based on a common field between them. Different types of Joins are as follows: 
+
+- **INNER JOIN:** If the criteria is met, the INNER JOIN keyword selects all rows from both tables. By merging all rows from both tables that meet the requirement—that is, have the same value for the shared field—this keyword will provide a result set. 
+
+*Syntax:* 
+```
+SELECT table1.column1,table1.column2,table2.column1,....
+FROM table1 
+INNER JOIN table2
+ON table1.matching_column = table2.matching_column;
+
+
+table1: First table.
+table2: Second table
+matching_column: Column common to both the tables.
+```
+- **LEFT JOIN:** The rows that match for the table on the right side of the join are returned along with all of the rows from the table on the left side of the join. The result-set will include null for all rows for which there is no matching row on the right side. LEFT OUTER JOIN is another name for LEFT JOIN.
+
+*Syntax:* 
+```
+SELECT table1.column1,table1.column2,table2.column1,....
+FROM table1 
+LEFT JOIN table2
+ON table1.matching_column = table2.matching_column;
+
+
+table1: First table.
+table2: Second table
+matching_column: Column common to both the tables.
+```
+- **RIGHT JOIN:** LEFT JOIN and RIGHT JOIN are similar. This join gives back all the rows from the table on the right side of the join as well as any matching rows from the table on the left. The result-set will include null for any rows for which there is no matching row on the left. RIGHT OUTER JOIN is another name for RIGHT JOIN.
+
+*Syntax:* 
+```
+SELECT table1.column1,table1.column2,table2.column1,....
+FROM table1 
+RIGHT JOIN table2
+ON table1.matching_column = table2.matching_column;
+
+
+table1: First table.
+table2: Second table
+matching_column: Column common to both the tables.
+```
+- **FULL JOIN:** FULL JOIN creates the result-set by combining results of both LEFT JOIN and RIGHT JOIN. The result-set will contain all the rows from both tables. For the rows for which there is no matching, the result-set will contain NULL values.
+
+*Syntax:* 
+```
+SELECT table1.column1,table1.column2,table2.column1,....
+FROM table1 
+FULL JOIN table2
+ON table1.matching_column = table2.matching_column;
+
+
+table1: First table.
+table2: Second table
+matching_column: Column common to both the tables. 
+```
